@@ -5,17 +5,21 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "STUDENTS")
-public class Student {
+public class StudentEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "student_seq")
     @SequenceGenerator(name = "student_seq", sequenceName = "STUDENT_ID_SEQ", allocationSize = 1)
     private Long id;
+
+    @Column(nullable = false)
     private String name;
+    @Column(nullable = false , unique = true )
     private String email;
     private String major;
 
-    public Student() {}
+
+    public StudentEntity() {}
 
     public Long getId() {
         return id;
