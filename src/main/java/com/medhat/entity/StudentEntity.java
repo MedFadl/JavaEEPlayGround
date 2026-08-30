@@ -1,4 +1,4 @@
-package com.medhat.model;
+package com.medhat.entity;
 
 
 import jakarta.persistence.*;
@@ -14,12 +14,14 @@ public class StudentEntity {
 
     @Column(nullable = false)
     private String name;
-    @Column(nullable = false , unique = true )
+    @Column(nullable = false, unique = true)
     private String email;
+    @Column(nullable = false)
     private String major;
 
 
-    public StudentEntity() {}
+    public StudentEntity() {
+    }
 
     public Long getId() {
         return id;

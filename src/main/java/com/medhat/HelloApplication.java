@@ -1,4 +1,4 @@
-package com.medhat.taskone;
+package com.medhat;
 
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.core.Application;
